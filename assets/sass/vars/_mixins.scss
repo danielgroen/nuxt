@@ -1,0 +1,38 @@
+@function bpmax($breakpoint) {
+  $max-breakpoint: $breakpoint - 1px;
+  @return $max-breakpoint;
+}
+
+// selection
+@mixin selection {
+  ::selection {
+    @content;
+  }
+  ::-moz-selection {
+    @content;
+  }
+}
+
+// font
+@mixin font($font: 'Muli', $size: 16px, $weight: 600, $line-height: 1.4, $color: $black) {
+  font-family: $font, sans-serif; //nexa
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin breakpoint($min-width:null, $max-width:null) {
+  @if ($min-width == null) { @error "The breakpoint mixin needs at least a min-width as parameter"; }
+
+  @if ($max-width) {
+    @media only screen and (min-width: $min-width) and (max-width: ($max-width - 1px)) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-width: $min-width) {
+      @content;
+    }
+  }
+}

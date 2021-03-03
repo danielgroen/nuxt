@@ -1,0 +1,16 @@
+.link {
+  color: inherit;
+  border-bottom: 1px solid;
+  transition: color $speed $cubic-bezir;
+
+  &.normal {
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: $red;
+  }
+  &:after {
+    
+  }
+}
