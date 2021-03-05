@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run open & npm run nuxt:serve:dev",
+    "start": "npm run open & npm run dev",
     "open": "sleep 2 && xdg-open http://localhost:3000",
-    "deploy": "npm run nuxt:generate && node -e 'require(\"gh-pages\").publish(\"dist\", err => {} );'",
-    "nuxt:serve:dev": "nuxt",
-    "test:ci": "npm run test --watch=false --browsers=ChromeHeadless",
-    "test": "echo $@",
-    "nuxt:serve:prod": "nuxt start",
-    "nuxt:build": "nuxt build",
-    "nuxt:generate": "nuxt generate"
+    "dev": "nuxt",
+    "prod": "nuxt start",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "test:ci": "npx jest --watch=false --browsers=ChromeHeadless",
+    "test": "npx jest $@",
+    "deploy": "npm run nuxt:generate && node -e 'require(\"gh-pages\").publish(\"dist\", err => {} );'"
   },
   "dependencies": {
     "core-js": "^3.8.3",

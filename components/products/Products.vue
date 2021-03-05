@@ -2,27 +2,29 @@
   <section id="products">
     <div class="inner">
       <h3 class="title">{{ title }}</h3>
-      <carousel
-        :items="numberOfItems"
-        :nav="false"
-        :dots="false"
-        :loop="true"
-        :freedrag="true"
-        :responsive="{ 0: { items: 2 }, 720: { items: 5 } }"
-        :auto-height="true"
-        :autoplayTimeout="3500"
-        :rewind="false"
-        :autoplay="true"
-        class="product-wrapper"
-      >
-        <img
-          class="product"
-          v-for="item in items"
-          :key="item"
-          :src="'/img/products/' + item"
-          alt="Product"
-        />
-      </carousel>
+      <no-ssr placeholder="loading...">
+        <carousel
+          :items="numberOfItems"
+          :nav="false"
+          :dots="false"
+          :loop="true"
+          :freedrag="true"
+          :responsive="{ 0: { items: 2 }, 720: { items: 5 } }"
+          :auto-height="true"
+          :autoplayTimeout="3500"
+          :rewind="false"
+          :autoplay="true"
+          class="product-wrapper"
+        >
+          <img
+            class="product"
+            v-for="item in items"
+            :key="item"
+            :src="'/img/products/' + item"
+            alt="Product"
+          />
+        </carousel>
+      </no-ssr>
     </div>
     <nav class="navigation">{{ navigation }}</nav>
   </section>
@@ -30,6 +32,9 @@
 
 <script>
 import carousel from "vue-owl-carousel2";
+// if (process.client) {
+//   require("vue-owl-carousel2");
+// }
 
 export default {
   name: "Products",

@@ -1,5 +1,5 @@
+- [ ] kijken naar `ReferenceError: document is not defined` heeft met ssr te maken
 - [ ] custom loading screen
 - [ ] kijken wat er gebeurt als je in components een subfolder hebt en daar index.vue neerzet
-
 - [ ] Jest implementeren
 - [ ] content module implementeren
