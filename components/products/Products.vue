@@ -31,11 +31,6 @@
 </template>
 
 <script>
-import carousel from "vue-owl-carousel2";
-// if (process.client) {
-//   require("vue-owl-carousel2");
-// }
-
 export default {
   name: "Products",
   data: function () {
@@ -78,17 +73,16 @@ export default {
       ],
     };
   },
-  components: {
-    carousel,
-  },
   methods: {
     getViewport: function () {
-      let viewport = Number(
-        getComputedStyle(document.documentElement)
-          .getPropertyValue("--items")
-          .split(",")
-      );
-      this.numberOfItems = viewport;
+      if (process.client) {
+        let viewport = Number(
+          getComputedStyle(document.documentElement)
+            .getPropertyValue("--items")
+            .split(",")
+        );
+        this.numberOfItems = viewport;
+      }
     },
   },
   created: function () {

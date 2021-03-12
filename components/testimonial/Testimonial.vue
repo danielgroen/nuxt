@@ -1,28 +1,29 @@
 <template>
   <section id="testimonials">
     <div class="inner">
-      <carousel
-        :items="1"
-        :center="true"
-        :nav="false"
-        :dots="false"
-        :autoplay="true"
-        :autoplayTimeout="6500"
-        :loop="true"
-      >
-        <blockquote v-for="(item, index) in items" :key="index" class="quote">
-          {{ item }}
-        </blockquote>
-      </carousel>
+      <no-ssr placeholder="loading...">
+        <carousel
+          :items="1"
+          :center="true"
+          :nav="false"
+          :dots="false"
+          :autoplay="true"
+          :autoplayTimeout="6500"
+          :loop="true"
+        >
+          <blockquote v-for="(item, index) in items" :key="index" class="quote">
+            {{ item }}
+          </blockquote>
+        </carousel>
+      </no-ssr>
     </div>
     <nav class="navigation">{{ navigation }}</nav>
   </section>
 </template>
 
 <script>
-import carousel from "vue-owl-carousel2";
-
 export default {
+  name: "Testimonial",
   data: function () {
     return {
       navigation: "Testimonials",
@@ -35,9 +36,6 @@ export default {
         "Hoe fijn is het als je 's morgens wakker wordt met de gedachten dat je alleen maar met haar bezig hoeft te zijn",
       ],
     };
-  },
-  components: {
-    carousel,
   },
 };
 </script>
