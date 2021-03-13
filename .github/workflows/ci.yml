@@ -48,6 +48,11 @@ jobs:
       - name: 📦 Run build
         run: npm run build
 
+      # GENERATE
+      - name: 📦 Run generate
+        run: npm run generate
+
+      # GH-PAGES
       - name: Gh-pages deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
