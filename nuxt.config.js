@@ -39,7 +39,7 @@ export default {
       { property: "og:image:height", content:"630"},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' }
     ]
   },
 
