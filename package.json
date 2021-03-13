@@ -9,7 +9,7 @@
     "prod": "nuxt start",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "lighthouse": "npx lighthouse https://kapsalonanssoest.nl --output json --output-path ./lighthouse.json --quiet",
+    "lighthouse": "npx lighthouse https://kapsalonanssoest.nl --chrome-flags='--headless' --output-path ./lighthouse.html --quiet",
     "test:ci": "npx jest --watch=false --browsers=ChromeHeadless",
     "test": "npx jest $@"
   },
