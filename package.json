@@ -9,7 +9,6 @@
     "prod": "nuxt start",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "lighthouse": "npx lighthouse https://kapsalonanssoest.nl --chrome-flags='--headless' --output-path ./lighthouse.html --quiet",
     "test:ci": "npx jest --watch=false --browsers=ChromeHeadless",
     "test": "npx jest $@"
   },
@@ -23,7 +22,6 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
-    "lighthouse": "^7.2.0",
     "node-sass": "^4.12.0",
     "nuxt-font-loader-strategy": "^1.1.9",
     "nuxt-leaflet": "0.0.25",

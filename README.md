@@ -12,7 +12,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/danielgroen/kapsalonanssoest/nuxt?label=Nuxt&logo=nuxt.js&color=00C58E)
 <!-- ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/danielgroen/kapsalonanssoest/dev/typescript?logo=typescript) -->
 
-<iframe width="100%" href="./lighthouse.html"></iframe>
-
 ## Installation
 1. `npm i`
