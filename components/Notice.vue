@@ -1,5 +1,5 @@
 <template>
-  <div class="notice">
+  <div class="notice" :class="{ removed: this.removed }">
     <svg
       class="icon cross"
       @click="this.removeNotice"
@@ -33,14 +33,13 @@
 export default {
   name: "Notice",
   data: function () {
-    return {};
+    return {
+      removed: false,
+    };
   },
   methods: {
     removeNotice: function () {
-      if (process.client) {
-        const notice = document.getElementsByClassName("notice");
-        notice[0].classList.add("remove");
-      }
+      this.removed = true;
     },
   },
 };
@@ -57,8 +56,9 @@ a {
 }
 
 .notice {
-  &.remove {
-    opacity: 0;
+  &.removed {
+    opacity: 0 !important;
+    animation: none;
   }
 
   .cross {

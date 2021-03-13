@@ -69,8 +69,39 @@ export default {
   modules: [
     'nuxt-rfg-icon',
     'nuxt-leaflet',
+    [
+      'nuxt-font-loader-strategy',
+      {
+        ignoredEffectiveTypes: ['2g', 'slow-2g'],
+        fonts: [
+          {
+            fileExtensions: ['ttf'],
+            fontFamily: 'Muli',
+            fontFaces: [
+              {
+                preload: true,
+                src: '@/assets/fonts/Muli',
+                fontWeight: 300,
+                fontStyle: 'normal',
+              },
+            ],
+          },
+          {
+            fileExtensions: ['ttf'],
+            fontFamily: 'Nexa',
+            fontFaces: [
+              {
+                preload: true,
+                src: '@/assets/fonts/Nexa_Light',
+                fontWeight: 100,
+                fontStyle: 'normal',
+              },
+            ],
+          },
+        ],
+      },
+    ],
   ],
-
   
   // TODO:: have a look why implementing modules wont work with vite
   vite: {

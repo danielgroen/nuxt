@@ -23,6 +23,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "node-sass": "^4.12.0",
+    "nuxt-font-loader-strategy": "^1.1.9",
     "nuxt-leaflet": "0.0.25",
     "nuxt-rfg-icon": "^0.6.4",
     "nuxt-vite": "0.0.21",
