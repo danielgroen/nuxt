@@ -1,5 +1,6 @@
 <template>
   <header id="header" :class="{ loaded: loaded }">
+    <img :v-show="true" class="hero-image" src="/img/DSC_0186.jpg" alt="" />
     <div class="inner">
       <div class="main">
         <div v-html="logo"></div>
@@ -91,7 +92,6 @@ $arrow-width: 40px;
   height: 100vh; // fallback
   height: calc((var(--vh, 1vh) * 100));
   width: 100vw;
-
   svg {
     display: block;
     width: 100%;
@@ -112,23 +112,22 @@ $arrow-width: 40px;
     }
   }
 
-  // background-image
-  &::after {
-    content: "";
+  .hero-image {
     pointer-events: none;
     position: absolute;
-    background: url("/img/DSC_0186.jpg") 50% 50%;
-
+    // TODO:: hier een img tag van maken en aanpassen naar v-show
     background-size: cover;
     width: 100%;
     height: 100%;
     left: 0;
+    transition: opacity 0.5s $easing;
+    opacity: 0;
     z-index: -1;
     top: 0;
   }
 
   &.loaded {
-    &::after {
+    .hero-image {
       opacity: 0.3;
     }
   }
