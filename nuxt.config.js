@@ -63,11 +63,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // '@nuxtjs/dotenv',
     '@nuxtjs/svg',
     // 'nuxt-vite',
   ],
   modules: [
+    'nuxt-rfg-icon',
     'nuxt-leaflet',
   ],
 

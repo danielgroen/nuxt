@@ -1,11 +1,12 @@
+- [ ] de notice kan je nu niet wegklikken
+- [ ] ssr werkt niet
+- [ ] base.scss inladen als css bestand met defaults en die weer alle vars in laten laden. dan vervolgens de vars in de preprocess in laten laden
+zo heb je base als global ingeladen en de andere bestandjes met alleen vars in elke element
+- [ ] livegang
 - [ ] custom loading screen
 - [ ] Jest implementeren
-- [ ] de notice kan je nu niet wegklikken
 - [ ] content module implementeren voor data
   - testimonial items in json
   - notice tekst
   - vacature tekst
-- [ ] base.scss inladen als css bestand met defaults en die weer alle vars in laten laden. dan vervolgens de vars in de preprocess in laten laden
-zo heb je base als global ingeladen en de andere bestandjes met alleen vars in elke element
-
 - gkn3 shizzle van nuxt importeren. bvb preload en die soort favicon generator
