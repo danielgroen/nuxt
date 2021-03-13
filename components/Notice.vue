@@ -37,8 +37,10 @@ export default {
   },
   methods: {
     removeNotice: function () {
-      const notice = document.getElementsByClassName("notice");
-      notice[0].classList.add("remove");
+      if (process.client) {
+        const notice = document.getElementsByClassName("notice");
+        notice[0].classList.add("remove");
+      }
     },
   },
 };
@@ -56,7 +58,7 @@ a {
 
 .notice {
   &.remove {
-    transform: translateX(-100vw);
+    opacity: 0;
   }
 
   .cross {
@@ -69,16 +71,17 @@ a {
     fill: rgba($white, 1);
   }
 
-  transition: transform 0.5s $easing;
-  transform: translateX(0);
+  transition: opacity 0.5s $easing;
+  opacity: 0;
   $offset: 10px;
   position: fixed;
-  animation: fade-in 0.5s forwards;
-  animation-delay: 2s;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
   bottom: $offset;
   text-align: center;
-  left: -100vw;
-  right: $offset;
+  transform: translateX(calc(50vw - 50%));
   z-index: 555;
   background-color: rgba($black, 0.93);
   color: white;
@@ -90,11 +93,8 @@ a {
     max-width: $max-width;
     margin: 0 auto;
     $offset: 10px;
-    left: -100vw;
-    bottom: $offset;
-    right: 0;
+    bottom: $offset * 2;
     padding: 20px 40px;
-    animation: fade-in-desktop 1s forwards;
     width: 100%;
 
     a {
@@ -105,18 +105,10 @@ a {
 
 @keyframes fade-in {
   from {
-    left: -100vw;
+    opacity: 0;
   }
   to {
-    left: 10px;
-  }
-}
-@keyframes fade-in-desktop {
-  from {
-    left: -100vw;
-  }
-  to {
-    left: 0px;
+    opacity: 1;
   }
 }
 </style>

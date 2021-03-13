@@ -1,5 +1,11 @@
-- [ ] kijken naar `ReferenceError: document is not defined` heeft met ssr te maken
 - [ ] custom loading screen
-- [ ] kijken wat er gebeurt als je in components een subfolder hebt en daar index.vue neerzet
 - [ ] Jest implementeren
-- [ ] content module implementeren
+- [ ] de notice kan je nu niet wegklikken
+- [ ] content module implementeren voor data
+  - testimonial items in json
+  - notice tekst
+  - vacature tekst
+- [ ] base.scss inladen als css bestand met defaults en die weer alle vars in laten laden. dan vervolgens de vars in de preprocess in laten laden
+zo heb je base als global ingeladen en de andere bestandjes met alleen vars in elke element
+
+- gkn3 shizzle van nuxt importeren. bvb preload en die soort favicon generator

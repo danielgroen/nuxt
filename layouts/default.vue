@@ -8,10 +8,10 @@
       ></a>
       <p class="text">{{ this.$store.state.contact.phone }}</p>
     </div>
-    <LazyNotice />
     <LazyHero />
     <Nuxt />
     <LazyCredentials />
+    <LazyNotice />
     <div class="overlay"></div>
   </div>
 </template>

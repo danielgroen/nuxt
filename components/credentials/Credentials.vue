@@ -34,7 +34,7 @@ export default {
 
 <style scoped lang="scss">
 #footer {
-  padding: 20px 0;
+  padding: 60px 0 0;
   position: relative;
   border-bottom: 60px solid $white;
 
