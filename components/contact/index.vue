@@ -144,6 +144,7 @@ export default {
       pointer-events: all;
       background-color: $white;
       color: $black;
+      margin: 20px 0;
       border-radius: 20px 20px 0px 20px;
       padding-bottom: 80px;
       padding-left: calc(100vw / 24 * 1.5);

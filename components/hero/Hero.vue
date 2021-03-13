@@ -122,6 +122,7 @@ $arrow-width: 40px;
     transition: opacity 0.5s $easing;
     opacity: 0;
     z-index: -1;
+    object-fit: cover;
     top: 0;
   }
 
