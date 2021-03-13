@@ -52,7 +52,24 @@ jobs:
       - name: 📦 Run generate
         run: npm run generate
 
-      # GH-PAGES
+      # LIGHTHOUSE CI 
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+          # DEPLOYMENT
       - name: Gh-pages deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
