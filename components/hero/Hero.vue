@@ -115,7 +115,6 @@ $arrow-width: 40px;
   .hero-image {
     pointer-events: none;
     position: absolute;
-    // TODO:: hier een img tag van maken en aanpassen naar v-show
     background-size: cover;
     width: 100%;
     height: 100%;

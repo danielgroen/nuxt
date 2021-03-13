@@ -1,6 +1,5 @@
 const company = {
   name: 'Kapsalon Ans',
-  phone: '0031612312541'
 }
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -33,8 +32,8 @@ export default {
       { name: "og:type", content:"website" },
       { property: "og:url", content:"<%= BASE_URL %>"},
       { property: "og:site_name", content:`${company.name}`},
-      { property: "og:description", content:"Website ${company.name} Soest" },
-      { property: "og:image", content:"<%= BASE_URL %>assets/og-image.png"},
+      { property: "og:description", content:`Website ${company.name} Soest` },
+      { property: "og:image", content:"/og-image.png"},
       { property: "og:image:width", content:"1200"},
       { property: "og:image:height", content:"630"},
     ],
