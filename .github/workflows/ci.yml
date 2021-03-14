@@ -59,11 +59,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-  # LIGHTHOUSE CI 
-  lighthouse:
-    needs: cicd
-    runs-on: ubuntu-latest
-    steps:
+      # LIGHTHOUSE CI 
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
