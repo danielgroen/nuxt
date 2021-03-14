@@ -6,7 +6,7 @@ on:
       - master
       - develop
 jobs:
-  ci:
+  cicd:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -52,26 +52,20 @@ jobs:
       - name: 📦 Run generate
         run: npm run generate
 
-      # LIGHTHOUSE CI 
+      # DEPLOYMENT
+      - name: Gh-pages deployment
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+  # LIGHTHOUSE CI 
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
-  cd:
-    needs: ci
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
-    steps:
-          # DEPLOYMENT
-      - name: Gh-pages deployment
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
