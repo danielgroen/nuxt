@@ -33,34 +33,34 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: 👨🏻‍💻 Install dependencies
+      - name: 👨🏻‍💻 Install
         run: npm ci
 
       # LINT
-      # - name: 👀 Run linter
+      # - name: 👀 Lint
       #   run: npm run lint
 
       # TEST
-      # - name: 🧪 Run test
+      # - name: 🧪 Test
       #   run: npm run test:ci
 
       # BUILD
-      - name: 🛠 Run build
+      - name: 🛠 Build
         run: npm run build
 
       # GENERATE
-      - name: 📦 Run generate
+      - name: 📦 Generate
         run: npm run generate
 
       # DEPLOYMENT
-      - name: 🚀 Gh-pages deployment
+      - name: 🚀 Deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
       # LIGHTHOUSE CI 
-      - name: 📈 run Lighthouse CI
+      - name: 📈 Statistics report
         run: |
           npm install -g @lhci/cli@0.7.x
           lhci autorun
