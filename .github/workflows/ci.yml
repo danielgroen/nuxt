@@ -45,7 +45,7 @@ jobs:
       #   run: npm run test:ci
 
       # BUILD
-      - name: 📦 Run build
+      - name: 🛠 Run build
         run: npm run build
 
       # GENERATE
@@ -53,14 +53,14 @@ jobs:
         run: npm run generate
 
       # DEPLOYMENT
-      - name: Gh-pages deployment
+      - name: 🚀 Gh-pages deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
       # LIGHTHOUSE CI 
-      - name: run Lighthouse CI
+      - name: 📈 run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
           lhci autorun
