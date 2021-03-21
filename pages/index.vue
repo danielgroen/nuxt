@@ -3,7 +3,7 @@
     <Job />
     <Products />
     <Contact />
-    <Instagram />
+    <LazyInstagram />
     <Testimonial />
   </main>
 </template>

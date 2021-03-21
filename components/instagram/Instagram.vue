@@ -1,34 +1,51 @@
+
 <template>
   <section id="instagram">
-    <div class="inner">
-      <div class="text-wrapper">
-        <h3 class="title" v-html="title"></h3>
+    <p>Fetching data: {{ $nuxt.isFetching }} ({{ $nuxt.nbFetching }})</p>
+    <template v-if="$fetchState.pending">Loading...</template>
+    <template v-else-if="$fetchState.error">
+      <p>Error while fetching posts</p>
+    </template>
+    <template v-else>
+      <div class="inner">
+        <div class="text-wrapper">
+          <h3 class="title" v-html="title"></h3>
+        </div>
+        <div id="instafeed"></div>
       </div>
-      <div id="instafeed"></div>
-    </div>
-    <nav class="navigation">{{ navigation }}</nav>
+      <nav class="navigation">{{ navigation }}</nav>
+    </template>
   </section>
 </template>
 
 <script>
-// https://www.powr.io
+// TODO:: fetch.isfetching loading state
 export default {
   name: "Instagram",
   data: function () {
     return {
       navigation: "Instagram",
+      InstagramToken: [],
       title:
         'Laat je inspireren en volg ons op <a class="link" target="blank"href="https://www.instagram.com/kapsalon_ans">Instagram</a>',
     };
   },
-  // https://github.com/companionstudio/instagram-token-agent
+  async fetch() {
+    // https://github.com/companionstudio/instagram-token-agent/issues/5#issuecomment-627197657
+    console.log("FETCH CALLED!");
+    this.InstagramToken = await fetch(
+      "//token-agent.herokuapp.com/token.json"
+    ).then((res) => res.json());
+  },
+  fetchOnServer: false,
   methods: {
     loadFeed: function () {
+      console.log(this.InstagramToken);
       const userFeed = new Instafeed({
         get: "user",
         userId: "",
         clientId: "249315366177273",
-        accessToken: InstagramToken,
+        accessToken: this.InstagramToken.token, // loaded var loaded in external token url
         resolution: "thumbnail",
         template:
           '<a href="{{link}}" style="background-image:url({{image}});" target="_blank" id="{{id}}"></a>',
@@ -40,6 +57,8 @@ export default {
     },
   },
   mounted: function () {
+    this.$fetch();
+
     // this.loadFeed();
   },
 };

@@ -27,7 +27,7 @@ export default {
       { name: "author", content:"Ans Ros"},
       { name: "keywords", content:"Ans, kapsalon, Soest, Ros, leuke, goede, goeie, kapper, kapster, Baarn, knippen, haar, wax, hairextensions, haarextensions, highlights, afspraak, openingstijden, contact"},
       { name: "viewport", content:"width=device-width, initial-scale=1"},
-  
+
       { property: "og:title", content:`${company.name}`},
       { name: "og:type", content:"website" },
       { property: "og:url", content:"<%= BASE_URL %>"},
@@ -39,7 +39,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' }
-    ]
+    ],
+    // script: [
+    //   {
+    //     src: "https://token-agent.herokuapp.com/token.js",
+    //     body: true,
+    //   }
+    // ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -66,8 +72,8 @@ export default {
     // 'nuxt-vite',
   ],
   modules: [
-    'nuxt-rfg-icon',
     'nuxt-leaflet',
+    'nuxt-rfg-icon',
     [
       'nuxt-font-loader-strategy',
       {
@@ -101,7 +107,7 @@ export default {
       },
     ],
   ],
-  
+
   // TODO:: have a look why implementing modules wont work with vite
   vite: {
     optimizeDeps: {
@@ -116,7 +122,7 @@ export default {
                 additionalData: `@import "@/assets/sass/vars/vars.scss";`,
               },
             },
-        }, 
+        },
     },
   build: {
     loaders: {

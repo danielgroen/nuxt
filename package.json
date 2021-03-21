@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run open & npm run dev",
-    "open": "sleep 2 && xdg-open http://localhost:3000",
+    "open": "sleep 2 && open http://localhost:3000",
     "dev": "nuxt",
     "prod": "nuxt start",
     "build": "nuxt build",

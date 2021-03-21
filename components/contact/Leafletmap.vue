@@ -1,15 +1,17 @@
 <template>
   <div class="map">
-    <l-map :zoom="zoom" :center="center" :options="options">
-      <l-tile-layer :url="mapbox"></l-tile-layer>
-      <l-marker :lat-lng="marker">
-        <l-icon
-          :icon-size="icon.iconSize"
-          :icon-anchor="icon.iconAnchor"
-          :icon-url="icon.url"
-        />
-      </l-marker>
-    </l-map>
+    <no-ssr>
+      <l-map :zoom="zoom" :center="center" :options="options">
+        <l-tile-layer :url="mapbox"></l-tile-layer>
+        <l-marker :lat-lng="marker">
+          <l-icon
+            :icon-size="icon.iconSize"
+            :icon-anchor="icon.iconAnchor"
+            :icon-url="icon.url"
+          />
+        </l-marker>
+      </l-map>
+    </no-ssr>
   </div>
 </template>
 

@@ -57,13 +57,62 @@
 
 <script>
 import close from "~/assets/svg/close.svg?raw";
+
+const OpeningsHours = {
+  maandag: {
+    open: "Telefonisch bereikbaar",
+    currentDay: false,
+    gesloten: true,
+  },
+  dinsdag: {
+    open: "09:00",
+    sluit: "17:30",
+    currentDay: false,
+  },
+  woensdag: {
+    open: "09:00",
+    sluit: "17:30",
+    currentDay: false,
+  },
+  donderdag: {
+    open: "09:00",
+    sluit: "17:30",
+    currentDay: false,
+  },
+  vrijdag: {
+    open: "08:30",
+    sluit: "20:30",
+    currentDay: false,
+  },
+  zaterdag: {
+    open: "08:30",
+    sluit: "16:00",
+    currentDay: false,
+  },
+  zondag: {
+    open: "Gesloten",
+    currentDay: false,
+    gesloten: true,
+  },
+};
+
+const Days = [
+  "zondag",
+  "maandag",
+  "dinsdag",
+  "woensdag",
+  "donderdag",
+  "vrijdag",
+  "zaterdag",
+];
+
 export default {
   name: "Contact",
   data: function () {
     return {
       close: close,
       navigation: "Contact",
-      openingHours: this.$store.state.contact.openingHours,
+      openingHours: OpeningsHours,
       mobile: {
         collapsed: false,
         focus: false,
@@ -93,17 +142,8 @@ export default {
       }
     },
     currentDay: function () {
-      const days = [
-        "zondag",
-        "maandag",
-        "dinsdag",
-        "woensdag",
-        "donderdag",
-        "vrijdag",
-        "zaterdag",
-      ];
       const d = new Date(),
-        day = days[d.getDay()];
+        day = Days[d.getDay()];
 
       this.openingHours[day].currentDay = true;
     },
