@@ -1,12 +1,13 @@
 
 <template>
   <section id="instagram">
-    <p>Fetching data: {{ $nuxt.isFetching }} ({{ $nuxt.nbFetching }})</p>
+    <!-- <p>Fetching data: {{ $nuxt.isFetching }} ({{ $nuxt.nbFetching }})</p>
     <template v-if="$fetchState.pending">Loading...</template>
     <template v-else-if="$fetchState.error">
       <p>Error while fetching posts</p>
     </template>
-    <template v-else>
+    <template v-else> -->
+    <template>
       <div class="inner">
         <div class="text-wrapper">
           <h3 class="title" v-html="title"></h3>
@@ -34,7 +35,8 @@ export default {
     // https://github.com/companionstudio/instagram-token-agent/issues/5#issuecomment-627197657
     console.log("FETCH CALLED!");
     this.InstagramToken = await fetch(
-      "//token-agent.herokuapp.com/token.json"
+      "//token-agent.herokuapp.com/token.js",
+      {}
     ).then((res) => res.json());
   },
   fetchOnServer: false,
