@@ -33,7 +33,6 @@ export default {
   },
   fetchOnServer: false,
   async fetch() {
-    console.log(InstagramToken, Instafeed);
     const userFeed = new Instafeed({
       get: "user",
       userId: "",
@@ -46,11 +45,9 @@ export default {
       limit: 20,
       links: false,
     });
-    userFeed.run();
+    // userFeed.run();
   },
-  mounted: function () {
-    // this.loadFeed();
-  },
+  mounted: function () {},
 };
 </script>
 
