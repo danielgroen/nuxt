@@ -40,12 +40,12 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' }
     ],
-    // script: [
-    //   {
-    //     src: "https://token-agent.herokuapp.com/token.js",
-    //     body: true,
-    //   }
-    // ],
+    script: [
+      {
+        src: "https://token-agent.herokuapp.com/token.js",
+        body: true,
+      }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -56,15 +56,14 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: 'plugins/owl.js', ssr: false} // Only works on client side
+    {src: 'plugins/owl.js', mode: 'client'}, // Only works on client side
+    // {src: 'plugins/instafeed.js', mode: 'client'}, // Only works on client side
+    // {src: '~/node_modules/instafeed.js/dist/instafeed.min.js', mode: 'client'},
+    // node_modules/instafeed.js/dist/instafeed.es.js
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  script: [
-    {src: '../instafeed.js/dist/instafeed.min.js'},
-  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -80,6 +79,7 @@ export default {
         ignoredEffectiveTypes: ['2g', 'slow-2g'],
         fonts: [
           {
+            // TODO:: dit font is te dik. als het scherm niet retina is
             fileExtensions: ['ttf'],
             fontFamily: 'Muli',
             fontFaces: [
@@ -87,7 +87,7 @@ export default {
                 preload: true,
                 src: '@/assets/fonts/Muli',
                 fontWeight: 300,
-                fontStyle: 'normal',
+                fontStyle: 'light',
               },
             ],
           },
@@ -117,6 +117,7 @@ export default {
     },
     css: {
         preprocessorOptions: {
+          // TODO:: zelfde environment maken als bij gkn
             scss: {
                 sourceMap: true,
                 additionalData: `@import "@/assets/sass/vars/vars.scss";`,
@@ -124,6 +125,7 @@ export default {
             },
         },
     },
+
   build: {
     loaders: {
         scss: {

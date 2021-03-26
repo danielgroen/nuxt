@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12",
-    "instafeed.js": "git+https://github.com/stevenschobert/instafeed.js.git",
-    "leaflet": "^1.7.1"
+    "instafeed.js": "github:stevenschobert/instafeed.js",
+    "leaflet": "^1.7.1",
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",

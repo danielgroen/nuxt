@@ -20,47 +20,35 @@
 </template>
 
 <script>
-// TODO:: fetch.isfetching loading state
+import * as Instafeed from "instafeed.js/dist/instafeed.min.js";
 export default {
   name: "Instagram",
   data: function () {
     return {
       navigation: "Instagram",
-      InstagramToken: [],
+      InstagramAppId: "249315366177273",
       title:
         'Laat je inspireren en volg ons op <a class="link" target="blank"href="https://www.instagram.com/kapsalon_ans">Instagram</a>',
     };
   },
-  async fetch() {
-    // https://github.com/companionstudio/instagram-token-agent/issues/5#issuecomment-627197657
-    console.log("FETCH CALLED!");
-    this.InstagramToken = await fetch(
-      "//token-agent.herokuapp.com/token.js",
-      {}
-    ).then((res) => res.json());
-  },
   fetchOnServer: false,
-  methods: {
-    loadFeed: function () {
-      console.log(this.InstagramToken);
-      const userFeed = new Instafeed({
-        get: "user",
-        userId: "",
-        clientId: "249315366177273",
-        accessToken: this.InstagramToken.token, // loaded var loaded in external token url
-        resolution: "thumbnail",
-        template:
-          '<a href="{{link}}" style="background-image:url({{image}});" target="_blank" id="{{id}}"></a>',
-        sortBy: "most-recent",
-        limit: 20,
-        links: false,
-      });
-      userFeed.run();
-    },
+  async fetch() {
+    console.log(InstagramToken, Instafeed);
+    const userFeed = new Instafeed({
+      get: "user",
+      userId: "",
+      clientId: this.InstagramAppId,
+      accessToken: InstagramToken, // loaded var loaded in external token url
+      resolution: "thumbnail",
+      template:
+        '<a href="{{link}}" style="background-image:url({{image}});" target="_blank" id="{{id}}"></a>',
+      sortBy: "most-recent",
+      limit: 20,
+      links: false,
+    });
+    userFeed.run();
   },
   mounted: function () {
-    this.$fetch();
-
     // this.loadFeed();
   },
 };
