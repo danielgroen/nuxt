@@ -26,6 +26,7 @@ export default {
   data: function () {
     return {
       navigation: "Instagram",
+      userFeed: false,
       InstagramAppId: "249315366177273",
       title:
         'Laat je inspireren en volg ons op <a class="link" target="blank"href="https://www.instagram.com/kapsalon_ans">Instagram</a>',
@@ -33,7 +34,7 @@ export default {
   },
   fetchOnServer: false,
   async fetch() {
-    const userFeed = new Instafeed({
+    this.userFeed = new Instafeed({
       get: "user",
       userId: "",
       clientId: this.InstagramAppId,
@@ -45,9 +46,10 @@ export default {
       limit: 20,
       links: false,
     });
-    userFeed.run();
   },
-  mounted: function () {},
+  mounted: function () {
+    this.userFeed.run();
+  },
 };
 </script>
 

@@ -1,11 +1,15 @@
-- [ ] Kijken hoe install, build, deploy en lighthouse in aparte stappen kunnen in gh actions (jobs)
 - [ ] base.scss inladen als css bestand met defaults en die weer alle vars in laten laden. dan vervolgens de vars in de preprocess in laten laden
 zo heb je base als global ingeladen en de andere bestandjes met alleen vars in elke element
 - [ ] custom loading screen
 - [ ] Jest implementeren
-- [ ] Onderzoek naar google lighthouse rapport
-- [ ] content module implementeren voor data
+- [ ] Stylelint
+- [ ] Editorconf
+- [ ] lazyload instagram
+- [ ] mooie preload voor instagram images
+- [ ] instafeedjs uitfasceren
+- [ ] context module implementeren voor data
   - testimonial items in json
   - notice tekst
   - vacature tekst
 - gkn3 shizzle van nuxt importeren. bvb preload en die soort favicon generator
+- [ ] Kijken hoe install, build, deploy en lighthouse in aparte stappen kunnen in gh actions (jobs)

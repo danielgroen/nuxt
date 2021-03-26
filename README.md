@@ -16,10 +16,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 1. `npm i`
 
 ## instafeed token verlopen?
-1. Log in bij Facebook developers
-2. in het zijmenu ga onder het kopje "products" naar "instagram Basic Display"
-3. Genereer een nieuwe token en kopieer de secret daarvan
-4. Login op heroku en verwijder de 'token-agent' app
-5. herbouw precies dezelfde app adhv de paarse knop op github: `https://github.com/companionstudio/instagram-token-agent`
-6. vul bij starting_token je secret van stap 3 in
-7. Done!
+ik heb nog geen idee wat er dan gedaan moe worden...
+De Long-access token hoort 60 dagen geldig te zijn. Deze is op 26-03-2021 aangemaakt op 20:10
+
+Dingen die je kan doen om te debuggen:
+1. verifieer of de [token agent](https://www.instant-tokens.com) nog dezelfde js bevat als wordt ingeladen in de nuxt.conf.js
+2. open de facebook [redirect url](https://kapsalonanssoest.nl/login) in de browser

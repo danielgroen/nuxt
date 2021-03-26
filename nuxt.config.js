@@ -2,16 +2,8 @@ const company = {
   name: 'Kapsalon Ans',
 }
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000'
-  },
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: company.name,
     htmlAttrs: {
@@ -41,10 +33,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' }
     ],
     script: [
-      // {
-      //   src: "https://token-agent.herokuapp.com/token.js",
-      //   body: true,
-      // },
       {
         src: "https://ig.instant-tokens.com/users/51f66933-3d37-44f7-a892-de04dd691753/instagram/17841406972317672/token.js?userSecret=9rhiah0i6anwi5b8n4rs9f",
         body: true,
@@ -60,10 +48,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: 'plugins/owl.js', mode: 'client'}, // Only works on client side
-    // {src: 'plugins/instafeed.js', mode: 'client'}, // Only works on client side
-    // {src: '~/node_modules/instafeed.js/dist/instafeed.min.js', mode: 'client'},
-    // node_modules/instafeed.js/dist/instafeed.es.js
+    {src: 'plugins/owl.js', mode: 'client'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
