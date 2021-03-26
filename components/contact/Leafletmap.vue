@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <no-ssr>
+    <client-only>
       <l-map :zoom="zoom" :center="center" :options="options">
         <l-tile-layer :url="mapbox"></l-tile-layer>
         <l-marker :lat-lng="marker">
@@ -11,7 +11,7 @@
           />
         </l-marker>
       </l-map>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <section id="products">
     <div class="inner">
       <h3 class="title">{{ title }}</h3>
-      <no-ssr placeholder="loading...">
+      <client-only placeholder="loading...">
         <carousel
           :items="numberOfItems"
           :nav="false"
@@ -24,7 +24,7 @@
             alt="Product"
           />
         </carousel>
-      </no-ssr>
+      </client-only>
     </div>
     <nav class="navigation">{{ navigation }}</nav>
   </section>

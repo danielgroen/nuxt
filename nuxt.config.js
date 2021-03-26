@@ -8,7 +8,7 @@ export default {
   target: 'static',
 
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'https://nuxtjs.org'
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head

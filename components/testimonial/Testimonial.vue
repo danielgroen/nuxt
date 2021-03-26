@@ -1,7 +1,7 @@
 <template>
   <section id="testimonials">
     <div class="inner">
-      <no-ssr placeholder="loading...">
+      <client-only placeholder="loading...">
         <carousel
           :items="1"
           :center="true"
@@ -15,7 +15,7 @@
             {{ item }}
           </blockquote>
         </carousel>
-      </no-ssr>
+      </client-only>
     </div>
     <nav class="navigation">{{ navigation }}</nav>
   </section>
