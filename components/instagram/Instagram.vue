@@ -45,7 +45,7 @@ export default {
       limit: 20,
       links: false,
     });
-    // userFeed.run();
+    userFeed.run();
   },
   mounted: function () {},
 };
