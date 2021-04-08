@@ -11,7 +11,7 @@
     <Hero />
     <Nuxt />
     <LazyCredentials />
-    <LazyNotice />
+    <!-- <LazyNotice /> -->
     <div class="overlay"></div>
   </div>
 </template>

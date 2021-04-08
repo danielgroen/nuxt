@@ -3,6 +3,7 @@ zo heb je base als global ingeladen en de andere bestandjes met alleen vars in e
 - [ ] custom loading screen
 - [ ] Jest implementeren
 - [ ] Stylelint
+- [ ] Vacature beter stylen
 - [ ] Editorconf
 - [ ] lazyload instagram
 - [ ] mooie preload voor instagram images
