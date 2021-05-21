@@ -10,7 +10,7 @@
         Ben of ken jij:<br />
         Iemand die uitdagingen niet uit de weggaat, initiatief toont op de
         werkvloer en niet schrikt van een volle agenda maar daar juist energie
-        van krijgt? Diegene met een creatief denkvermogen en graag zou wille
+        van krijgt? Diegene met een creatief denkvermogen en graag zou willen
         werken in een kapsalon met een no-nonsense mentaliteit werken in een
         gedreven team van ervaren hairstylisten presteren in een informele
         onderlinge sfeer. Tevens is er de door te blijven groeien doormiddel van

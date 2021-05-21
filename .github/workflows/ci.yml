@@ -59,7 +59,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-      # LIGHTHOUSE CI 
+      # LIGHTHOUSE CI
       - name: 📈 Statistics report
         run: |
           npm install -g @lhci/cli@0.7.x
