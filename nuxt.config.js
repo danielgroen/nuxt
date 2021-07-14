@@ -98,6 +98,10 @@ export default {
     ]
   ],
 
+  gtm: {
+    id: "UA-53030555-4"
+  },
+
   sitemap: {
     hostname: site.hostname
   },
