@@ -29,7 +29,6 @@
     "nuxt-font-loader-strategy": "^1.1.9",
     "nuxt-leaflet": "0.0.25",
     "nuxt-rfg-icon": "^0.6.4",
-    "nuxt-vite": "0.0.21",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "v-owl-carousel": "^1.0.8"
