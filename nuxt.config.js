@@ -103,7 +103,7 @@ export default {
   },
 
   sitemap: {
-    hostname: site.hostname
+    hostname: site.url
   },
 
   robots: {
