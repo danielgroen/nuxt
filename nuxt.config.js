@@ -56,14 +56,13 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/svg"],
+  buildModules: ["@nuxtjs/svg", "@nuxtjs/gtm"],
   modules: [
     "nuxt-leaflet",
     "nuxt-rfg-icon",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "@nuxtjs/component-cache",
-    "@nuxtjs/gtm",
     [
       "nuxt-font-loader-strategy",
       {
