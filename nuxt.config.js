@@ -63,6 +63,7 @@ export default {
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "@nuxtjs/component-cache",
+    "@nuxtjs/gtm",
     [
       "nuxt-font-loader-strategy",
       {
