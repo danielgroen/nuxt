@@ -3,7 +3,7 @@ const site = {
   description: "De website van kapsalon Ans ter Soest",
   url: "https://kapsalonans.nl",
   keywords:
-    "Ans, kapsalon, Soest, Ros, leuke, goede, goeie, kapper, kapster, Baarn, knippen, haar, wax, hairextensions, haarextensions, highlights, afspraak, openingstijden, contact"
+    "Ans, kapsalon, Soest, Ros, leuke, goede, goeie, kapper, kapster, Baarn, knippen, haar, wax, hairextensions, haarextensions, highlights, afspraak, openingstijden, contact",
 };
 export default {
   target: "static",
@@ -11,7 +11,7 @@ export default {
   head: {
     title: site.name,
     htmlAttrs: {
-      lang: "NL"
+      lang: "NL",
     },
     meta: [
       { charset: "utf-8" },
@@ -31,22 +31,21 @@ export default {
       { property: "og:description", content: `Website ${site.name} Soest` },
       { property: "og:image", content: "/og-image.png" },
       { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" }
+      { property: "og:image:height", content: "630" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/icons/favicon.ico" }],
     script: [
       {
-        src:
-          "https://ig.instant-tokens.com/users/51f66933-3d37-44f7-a892-de04dd691753/instagram/17841406972317672/token.js?userSecret=9rhiah0i6anwi5b8n4rs9f",
-        body: true
-      }
-    ]
+        src: "https://ig.instant-tokens.com/users/51f66933-3d37-44f7-a892-de04dd691753/instagram/17841406972317672/token.js?userSecret=9rhiah0i6anwi5b8n4rs9f",
+        body: true,
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     { src: "leaflet/dist/leaflet.css", lang: "css" },
-    { src: "assets/sass/base/base.scss", lang: "scss" }
+    { src: "assets/sass/base/base.scss", lang: "scss" },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -78,9 +77,9 @@ export default {
                 preload: true,
                 src: "@/assets/fonts/Muli",
                 fontWeight: 300,
-                fontStyle: "light"
-              }
-            ]
+                fontStyle: "light",
+              },
+            ],
           },
           {
             fileExtensions: ["ttf"],
@@ -90,27 +89,30 @@ export default {
                 preload: true,
                 src: "@/assets/fonts/Nexa_Light",
                 fontWeight: 100,
-                fontStyle: "normal"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+                fontStyle: "normal",
+              },
+            ],
+          },
+        ],
+      },
+    ],
   ],
 
   gtm: {
-    id: "UA-53030555-4"
+    id: "UA-53030555-4",
+    pageTracking: true,
+    scriptDefer: true,
+    enabled: process.env.NODE_ENV === "production" ? true : false,
   },
 
   sitemap: {
-    hostname: site.url
+    hostname: site.url,
   },
 
   robots: {
     UserAgent: "*",
     allow: "/",
-    Sitemap: `${site.url}/sitemap.xml`
+    Sitemap: `${site.url}/sitemap.xml`,
   },
 
   build: {
@@ -118,8 +120,8 @@ export default {
       scss: {
         sourceMap: true,
         implementation: require("sass"),
-        additionalData: `@import "@/assets/sass/vars/vars.scss";`
-      }
-    }
-  }
+        additionalData: `@import "@/assets/sass/vars/vars.scss";`,
+      },
+    },
+  },
 };
