@@ -55,14 +55,13 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/svg"],
+  buildModules: ["@nuxtjs/svg", "@nuxtjs/google-analytics"],
   modules: [
     "nuxt-leaflet",
     "nuxt-rfg-icon",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "@nuxtjs/component-cache",
-    "@nuxtjs/gtm",
     [
       "nuxt-font-loader-strategy",
       {
@@ -98,11 +97,9 @@ export default {
     ],
   ],
 
-  gtm: {
+  googleAnalytics: {
     id: "UA-53030555-4",
-    pageTracking: true,
-    scriptDefer: true,
-    enabled: process.env.NODE_ENV === "production" ? true : false,
+    dev: process.env.NODE_ENV === "development" ? true : false,
   },
 
   sitemap: {
