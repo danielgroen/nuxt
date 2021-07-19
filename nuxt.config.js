@@ -6,6 +6,7 @@ const site = {
     "Ans, kapsalon, Soest, Ros, leuke, goede, goeie, kapper, kapster, Baarn, knippen, haar, wax, hairextensions, haarextensions, highlights, afspraak, openingstijden, contact",
 };
 export default {
+  ssr: false,
   target: "static",
 
   head: {
@@ -42,6 +43,7 @@ export default {
       {
         innerHTML:
           "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JBFXQQT4LY');",
+        type: "text/javascript",
         charset: "utf-8",
       },
       {
