@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Allow: /
-Sitemap: https://kapsalonans.nl/sitemap.xml
+Sitemap: https://kapsalonanssoest.nl/sitemap.xml
