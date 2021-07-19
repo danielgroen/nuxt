@@ -67,7 +67,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/svg", "@nuxtjs/google-analytics"],
+  buildModules: ["@nuxtjs/svg"],
   modules: [
     "nuxt-leaflet",
     "nuxt-rfg-icon",
