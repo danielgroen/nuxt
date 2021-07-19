@@ -1,7 +1,7 @@
 const site = {
   name: "Kapsalon Ans",
   description: "De website van kapsalon Ans ter Soest",
-  url: "https://kapsalonans.nl",
+  url: "https://kapsalonanssoest.nl",
   keywords:
     "Ans, kapsalon, Soest, Ros, leuke, goede, goeie, kapper, kapster, Baarn, knippen, haar, wax, hairextensions, haarextensions, highlights, afspraak, openingstijden, contact",
 };
