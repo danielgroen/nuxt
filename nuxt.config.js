@@ -42,7 +42,6 @@ export default {
       {
         innerHTML:
           "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JBFXQQT4LY');",
-        type: "text/javascript",
         charset: "utf-8",
       },
       {
