@@ -41,7 +41,7 @@ export default {
       },
       {
         innerHTML:
-          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5MH4232XDR');",
+          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JBFXQQT4LY');",
         type: "text/javascript",
         charset: "utf-8",
       },
@@ -49,7 +49,7 @@ export default {
         async: true,
         type: "text/javascript",
         charset: "utf-8",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-5MH4232XDR",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-JBFXQQT4LY",
       },
     ],
   },
