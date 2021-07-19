@@ -39,6 +39,18 @@ export default {
         src: "https://ig.instant-tokens.com/users/51f66933-3d37-44f7-a892-de04dd691753/instagram/17841406972317672/token.js?userSecret=9rhiah0i6anwi5b8n4rs9f",
         body: true,
       },
+      {
+        innerHTML:
+          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5MH4232XDR');",
+        type: "text/javascript",
+        charset: "utf-8",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        charset: "utf-8",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-5MH4232XDR",
+      },
     ],
   },
 
@@ -96,11 +108,6 @@ export default {
       },
     ],
   ],
-
-  googleAnalytics: {
-    id: "UA-53030555-4",
-    dev: process.env.NODE_ENV === "development" ? true : false,
-  },
 
   sitemap: {
     hostname: site.url,
