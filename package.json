@@ -18,7 +18,8 @@
     "core-js": "^3.8.3",
     "instafeed.js": "github:stevenschobert/instafeed.js",
     "leaflet": "^1.7.1",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
     "@nuxtjs/component-cache": "^1.1.6",

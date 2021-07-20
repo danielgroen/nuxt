@@ -40,18 +40,18 @@ export default {
         src: "https://ig.instant-tokens.com/users/51f66933-3d37-44f7-a892-de04dd691753/instagram/17841406972317672/token.js?userSecret=9rhiah0i6anwi5b8n4rs9f",
         body: true,
       },
-      {
-        innerHTML:
-          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JBFXQQT4LY');",
-        type: "text/javascript",
-        charset: "utf-8",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        charset: "utf-8",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-JBFXQQT4LY",
-      },
+      // {
+      //   innerHTML:
+      //     "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JBFXQQT4LY');",
+      //   type: "text/javascript",
+      //   charset: "utf-8",
+      // },
+      // {
+      //   async: true,
+      //   type: "text/javascript",
+      //   charset: "utf-8",
+      //   src: "https://www.googletagmanager.com/gtag/js?id=G-JBFXQQT4LY",
+      // },
     ],
   },
 
@@ -62,7 +62,13 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "plugins/owl.js", mode: "client" }],
+  plugins: [
+    { src: "plugins/owl.js", mode: "client" },
+    {
+      src: "./plugins/GoogleAnalytics.js",
+      mode: "client",
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
