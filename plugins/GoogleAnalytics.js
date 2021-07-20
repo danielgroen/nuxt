@@ -8,6 +8,6 @@ console.log("hoi");
 Vue.use(VueGtag, {
   config: { id: "G-JBFXQQT4LY" },
   appName: "APP_NAME",
-  bootstrap: process.env.NODE_ENV === "development",
-  enabled: process.env.NODE_ENV === "development",
+  bootstrap: true,
+  enabled: true,
 });
